@@ -39,5 +39,7 @@ RUN mkdir -p $DATA_PATH && \
 VOLUME $DATA_PATH
 WORKDIR $DATA_PATH
 
+EXPOSE 8190
+
 USER ipfs
 ENTRYPOINT ["tini", "--", "/usr/local/bin/someguy", "start"]
